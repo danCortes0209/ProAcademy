@@ -17,4 +17,7 @@
     <string name="creators">Oswaldo Garcia Lemus and Daniel Hernandez Cortes</string>
     <string name="version">Version 1.0</string>
     <string name="score">Score</string>
+    <string name="autor">"Author: "</string>
+    <string name="puntot">Total Score</string>
+    <string name="resp">Your Answer</string>
 </resources>

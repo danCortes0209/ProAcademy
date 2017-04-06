@@ -14,9 +14,9 @@ public class TextActivity extends AppCompatActivity {
 
     int lvl;
     int idtext;
-    TextView textOfBook, textBook;
+    TextView textOfBook, textBook, autor;
     Button goBack, goQuestions;
-    String book, textofbook;
+    String book, textofbook, author;
     DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
@@ -26,6 +26,7 @@ public class TextActivity extends AppCompatActivity {
 
         textBook = (TextView)findViewById(R.id.bookOfOrigin);
         textOfBook = (TextView)findViewById(R.id.textOfBook);
+        autor = (TextView)findViewById(R.id.author);
         goBack = (Button)findViewById(R.id.btnBackMain);
         goQuestions = (Button)findViewById(R.id.btnGoAnsw);
 
@@ -64,7 +65,7 @@ public class TextActivity extends AppCompatActivity {
     public void getTextContent(){
         SQLiteDatabase db = helper.getWritableDatabase();
         String[] args = new String[]{""+lvl};
-        Cursor c = db.rawQuery("SELECT texts.content, books.book, texts.id_text FROM texts,books WHERE books.id_book = texts.nbook AND texts.leveltxt =? ",args);
+        Cursor c = db.rawQuery("SELECT texts.content, books.book, texts.id_text, books.author FROM texts,books WHERE books.id_book = texts.nbook AND texts.leveltxt =? ",args);
         if (c.moveToFirst()){
             textOfBook.setText("");
             textBook.setText("");
@@ -74,6 +75,8 @@ public class TextActivity extends AppCompatActivity {
                 book = c.getString(1);
                 textBook.setText(book);
                 idtext = c.getInt(2);
+                author = c.getString(3);
+                autor.setText(author);
             }while (c.moveToNext());
         }
     }

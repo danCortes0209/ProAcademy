@@ -11,9 +11,9 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnPlay, btnConf; //, btnList;
-    TextView tvPlay, tvConf; //, tvList;
-    DatabaseHelper helper = new DatabaseHelper(this);
+    Button btnPlay, btnConf; //Declara las viariables de todos los componentes
+    TextView tvPlay, tvConf;
+    DatabaseHelper helper = new DatabaseHelper(this);//manda llamar la clase de la base de datos
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnConf.setOnClickListener(clickListener);
         tvPlay.setOnClickListener(clickListener);
         tvConf.setOnClickListener(clickListener);
-        helper.openDatabase();
+        helper.openDatabase(); //solo en caso de crearla, se abre la base de datos y se cierra para implementarla dentro del movil
         helper.closeDatabase();
 
 
@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void goConfig(){
         Intent configIntent = new Intent(MainActivity.this,ConfigActivity.class);
-        MainActivity.this.startActivity(configIntent);
+        MainActivity.this.startActivity(configIntent);//envia hacia la actividad de config
     }
 
     public void goLevels(){
         Intent loginIntent = new Intent(MainActivity.this, LevelsActivity.class);
-        MainActivity.this.startActivity(loginIntent);
+        MainActivity.this.startActivity(loginIntent);//envia hacia la actividad de los niveles
         finish();
     }
 

@@ -17,7 +17,7 @@
         android:layout_height="wrap_content" />
     <TextView
         android:layout_marginTop="20dp"
-        android:id="@+id/tvScore"
+        android:id="@+id/tvScoreGot"
         android:text="0"
         android:textAlignment="center"
         android:textSize="200sp"
@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:id="@+id/gotScore"
         android:background="@drawable/ic_ready"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="end"/>
 </LinearLayout>

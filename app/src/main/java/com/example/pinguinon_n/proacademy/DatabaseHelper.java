@@ -2,12 +2,9 @@ package com.example.pinguinon_n.proacademy;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.ArrayList;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -122,9 +119,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "('¿Que fue lo que le hizo recordar Attua?',7,'Una travesura que hizo de niño en la iglesia','Una travesura que le hizo de niño al alcalde','Su infancia en la iglesia','Su infancia con el alcalde');";
 
 
-    public void insertRegs(int nanswer, String date, int score){
+    public void insertRegs(int nquestion, int score){
         ContentValues values = new ContentValues();
-        values.put("nanswer",nanswer);
+        values.put("nquestion",nquestion);
         values.put("score",score);
         this.getWritableDatabase().insert("answergot",null,values);
     }

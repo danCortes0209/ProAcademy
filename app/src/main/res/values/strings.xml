@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">ProAcademy</string>
+    <string name="app_name">Pro Academy</string>
     <string name="jugar">Comenzar el juego</string>
     <string name="config">Configuracion</string>
     <string name="logr">Actividades</string>
     <string name="infor">Informacion</string>
     <string name="book">Libro: </string>
+    <string name="autor">Autor: </string>
     <string name="selectlvl">Seleccione un nivel</string>
     <string name="login">Entrar</string>
     <string name="register">Registrarse</string>
@@ -16,5 +17,8 @@
     <string name="madeby">Creada por</string>
     <string name="creators">Oswaldo Garcia Lemus y Daniel Hernandez Cortes</string>
     <string name="score">Puntuacion</string>
+    <string name="resp">Su Respuesta</string>
+    <string name="puntot">Puntuacion total</string>
+
 
 </resources>

@@ -8,24 +8,9 @@ import android.widget.Button;
 
 public class LevelsActivity extends AppCompatActivity {
 
-    int id;
     int lvl;
-    String nameuser;
-    Button btnlvl1;
-    Button btnlvl2;
-    Button btnlvl3;
-    Button btnlvl4;
-    Button btnlvl5;
-    Button btnlvl6;
-    Button btnlvl7;
-    Button btnlvl8;
-    Button btnlvl9;
-    Button btnlvl10;
-    Button btnlvl11;
-    Button btnlvl12;
-    Button btnlvl13;
-    Button btnlvl14;
-    Button btnlvl15;
+    Button btnlvl1, btnlvl2, btnlvl3, btnlvl4, btnlvl5, btnlvl6, btnlvl7, btnlvl8, btnlvl9;
+    Button btnlvl10, btnlvl11, btnlvl12, btnlvl13, btnlvl14, btnlvl15;//Declara todas las variables
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +30,6 @@ public class LevelsActivity extends AppCompatActivity {
         btnlvl13 = (Button)findViewById(R.id.btnLvl13);
         btnlvl14 = (Button)findViewById(R.id.btnLvl14);
         btnlvl15 = (Button)findViewById(R.id.btnLvl15);
-        Intent intent = getIntent();
-        id = intent.getIntExtra("id",1);
-        nameuser = intent.getStringExtra("nameuser");
         btnlvl1.setOnClickListener(click);
         btnlvl2.setOnClickListener(click);
         btnlvl3.setOnClickListener(click);
@@ -69,7 +51,7 @@ public class LevelsActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if (v == btnlvl1){
-                lvl = 1;
+                lvl = 1;//en caso de que se seleccione un nivel, manda un entero con el valor del nivel
                 goText();
             } else if (v == btnlvl2){
                 lvl = 2;
@@ -119,7 +101,7 @@ public class LevelsActivity extends AppCompatActivity {
 
     public void goText(){
         Intent textIntent = new Intent(LevelsActivity.this,TextActivity.class);
-        textIntent.putExtra("lvl",lvl);
+        textIntent.putExtra("lvl",lvl);//inserta el entero en el activity del nivel y lanza la actividad
         LevelsActivity.this.startActivity(textIntent);
         finish();
     }
