@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pinguinon_n.proacademy.LevelsActivity">
+    <TextView
+        android:text="@string/selectlvl"
+        android:textColor="@color/textDark"
+        android:textSize="16sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintHorizontal_bias="0.0">
+        <LinearLayout
+            android:id="@+id/allbtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <LinearLayout
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <Button
+                    android:id="@+id/btnLvl1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn1"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl4"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn4"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl7"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn7"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl10"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn10"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl13"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn13"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnsCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <Button
+                    android:id="@+id/btnLvl2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn2"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl5"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn5"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl8"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn8"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl11"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn11"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl14"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn14"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnsRight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <Button
+                    android:id="@+id/btnLvl3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn3"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl6"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn6"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl9"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn9"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl12"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn12"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btnLvl15"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="11dp"
+                    android:background="@drawable/ic_btn15"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
