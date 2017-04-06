@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 public class QuestionActivity extends AppCompatActivity {
 
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

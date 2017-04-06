@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     Button btnPlay, btnConf; //, btnList;
     TextView tvPlay, tvConf; //, tvList;
-    DatabaseHelper helper = new DatabaseHelper(this, "DB1", null);
+    DatabaseHelper helper = new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,4 +53,6 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.this.startActivity(loginIntent);
         finish();
     }
+
+
 }

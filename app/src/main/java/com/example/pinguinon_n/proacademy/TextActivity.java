@@ -13,10 +13,11 @@ public class TextActivity extends AppCompatActivity {
 
 
     int lvl;
-
+    int idtext;
     TextView textOfBook, textBook;
     Button goBack, goQuestions;
     String book, textofbook;
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class TextActivity extends AppCompatActivity {
         Intent intent = getIntent();
         lvl = intent.getIntExtra("lvl",lvl);
 
+        getTextContent();
         goQuestions.setOnClickListener(clickListener);
         goBack.setOnClickListener(clickListener);
     }
@@ -54,8 +56,26 @@ public class TextActivity extends AppCompatActivity {
 
     public void goAnswers(){
         Intent answersIntent = new Intent(TextActivity.this,QuestionActivity.class);
+        answersIntent.putExtra("idtext",idtext);
         TextActivity.this.startActivity(answersIntent);
         finish();
+    }
+
+    public void getTextContent(){
+        SQLiteDatabase db = helper.getWritableDatabase();
+        String[] args = new String[]{""+lvl};
+        Cursor c = db.rawQuery("SELECT texts.content, books.book, texts.id_text FROM texts,books WHERE books.id_book = texts.nbook AND texts.leveltxt =? ",args);
+        if (c.moveToFirst()){
+            textOfBook.setText("");
+            textBook.setText("");
+            do {
+                textofbook = c.getString(0);
+                textOfBook.setText(textofbook);
+                book = c.getString(1);
+                textBook.setText(book);
+                idtext = c.getInt(2);
+            }while (c.moveToNext());
+        }
     }
 
 }
