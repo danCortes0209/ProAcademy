@@ -29,8 +29,8 @@ public class BuslibsActivity extends AppCompatActivity {
 
     ListView listLibs;
     ArrayAdapter adapter;
-    String getAllBookssURL = "http://192.168.0.14/siteacademy/api/getAllBooks.php";
-    int pack = 1;
+    String getAllBookssURL = "http://130.100.4.161/siteacademy/api/getAllBooks.php";
+    int pack = 2;
     String libro;
 
     @Override
