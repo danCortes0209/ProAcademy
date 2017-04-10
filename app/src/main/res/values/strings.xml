@@ -19,6 +19,9 @@
     <string name="score">Puntuacion</string>
     <string name="resp">Su Respuesta</string>
     <string name="puntot">Puntuacion total</string>
-
+    <string name="busclibs">Buscar libros</string>
+    <string name="addlib">Agregar libros</string>
+    <string name="verLibs">Mis libros</string>
+    <string name="queston">Mis preguntas</string>
 
 </resources>

@@ -23,6 +23,10 @@
         <activity android:name=".LevelsActivity" />
         <activity android:name=".ScoreActivity" />
         <activity android:name=".ConfigActivity" />
+        <activity android:name=".BuslibsActivity" />
+        <activity android:name=".MyBooks" />
+        <activity android:name=".MyQuestions" />
+        <activity android:name=".BuscquesActivity"></activity>
     </application>
 
 </manifest>
