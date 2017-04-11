@@ -29,7 +29,7 @@ public class BuslibsActivity extends AppCompatActivity {
 
     ListView listLibs;
     ArrayAdapter adapter;
-    String getAllBookssURL = "http://130.100.4.161/siteacademy/api/getAllBooks.php";
+    String getAllBookssURL = "http://192.168.0.14/siteacademy/api/getAllBooks.php";
     int pack = 2;
     String libro;
 
@@ -47,7 +47,9 @@ public class BuslibsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int pos = position;
                 libro = listLibs.getItemAtPosition(pos).toString();
-                Toast.makeText(getApplicationContext(),libro,Toast.LENGTH_LONG).show();
+                Intent goNewQuestions = new Intent(BuslibsActivity.this, BuscquesActivity.class);
+                goNewQuestions.putExtra("book", libro);
+                BuslibsActivity.this.startActivity(goNewQuestions);
             }
         });
     }

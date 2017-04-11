@@ -10,7 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class QuestionActivity extends AppCompatActivity {
+    Random ran = new Random();
     String question, answer1,answer2,answer3, answer4;
     int idtext, idquestion, score;
     TextView tvQuestion, ans1, ans2, ans3, ans4;
@@ -37,9 +40,28 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     public void getTextContent(){
+        int randQuery = ran.nextInt(4);
+        String query = "";
+        switch (randQuery) {
+            case 1:
+                query = "SELECT * FROM question WHERE ntext= ? LIMIT 1";
+                break;
+            case 2:
+                query = "SELECT * FROM question WHERE ntext = ? LIMIT 1,1";
+                break;
+            case 3:
+                query = "SELECT * FROM question WHERE ntext = ? LIMIT 2,1";
+                break;
+            case 4:
+                query = "SELECT * FROM question WHERE ntext = ? LIMIT 3,1";
+                break;
+            default:
+                query = "SELECT * FROM question WHERE ntext= ? LIMIT 1";
+                break;
+        }
         SQLiteDatabase db = helper.getWritableDatabase();
         String[] args = new String[]{""+idtext};
-        Cursor c = db.rawQuery("SELECT * FROM question WHERE ntext=?",args);
+        Cursor c = db.rawQuery(query, args);
         if (c.moveToFirst()){
             do {
                 idquestion = c.getInt(0);
