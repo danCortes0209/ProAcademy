@@ -15,7 +15,7 @@ public class TextActivity extends AppCompatActivity {
     int lvl;
     int idtext;
     TextView textOfBook, textBook, autor;
-    Button goBack, goQuestions;
+    Button goBack, goQuestions, addQuestion;
     String book, textofbook, author;
     DatabaseHelper helper = new DatabaseHelper(this);
 
@@ -29,6 +29,7 @@ public class TextActivity extends AppCompatActivity {
         autor = (TextView)findViewById(R.id.author);
         goBack = (Button)findViewById(R.id.btnBackMain);
         goQuestions = (Button)findViewById(R.id.btnGoAnsw);
+        addQuestion = (Button) findViewById(R.id.btnAddQuestion);
 
         Intent intent = getIntent();
         lvl = intent.getIntExtra("lvl",lvl);
@@ -36,6 +37,7 @@ public class TextActivity extends AppCompatActivity {
         getTextContent();
         goQuestions.setOnClickListener(clickListener);
         goBack.setOnClickListener(clickListener);
+        addQuestion.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -43,8 +45,10 @@ public class TextActivity extends AppCompatActivity {
         public void onClick(View v) {
             if (v == goBack){
                 goMain();
-            } else {
+            } else if (v == goQuestions) {
                 goAnswers();
+            } else if (v == addQuestion) {
+                goAddQuestion();
             }
         }
     };
@@ -60,6 +64,12 @@ public class TextActivity extends AppCompatActivity {
         answersIntent.putExtra("idtext",idtext);
         TextActivity.this.startActivity(answersIntent);
         finish();
+    }
+
+    public void goAddQuestion() {
+        Intent addQuestionIntent = new Intent(TextActivity.this, SuggestQuestionsActivity.class);
+        addQuestionIntent.putExtra("ntext", idtext);
+        TextActivity.this.startActivity(addQuestionIntent);
     }
 
     public void getTextContent(){

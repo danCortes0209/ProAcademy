@@ -29,7 +29,7 @@ public class BuslibsActivity extends AppCompatActivity {
 
     ListView listLibs;
     ArrayAdapter adapter;
-    String getAllBookssURL = "http://192.168.0.14/siteacademy/api/getAllBooks.php";
+    String getAllBookssURL = "http://192.168.0.16/siteacademy/api/getAllBooks.php";
     int pack = 2;
     String libro;
 

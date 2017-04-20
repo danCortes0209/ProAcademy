@@ -26,7 +26,8 @@
         <activity android:name=".BuslibsActivity" />
         <activity android:name=".MyBooks" />
         <activity android:name=".MyQuestions" />
-        <activity android:name=".BuscquesActivity"></activity>
+        <activity android:name=".BuscquesActivity" />
+        <activity android:name=".SuggestQuestionsActivity"></activity>
     </application>
 
 </manifest>
