@@ -20,4 +20,10 @@
     <string name="autor">"Author: "</string>
     <string name="puntot">Total Score</string>
     <string name="resp">Your Answer</string>
+    <string name="queston">My questions</string>
+    <string name="verLibs">My Books</string>
+    <string name="myaans">Answers</string>
+    <string name="newques">New Questions</string>
+    <string name="busclibs">Search Books</string>
+    <string name="addlib">Add Books</string>
 </resources>

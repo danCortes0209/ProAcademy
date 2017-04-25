@@ -24,5 +24,6 @@
     <string name="verLibs">Mis libros</string>
     <string name="queston">Mis preguntas</string>
     <string name="newques">Nuevas Preguntas</string>
+    <string name="myaans">Respuestas</string>
 
 </resources>

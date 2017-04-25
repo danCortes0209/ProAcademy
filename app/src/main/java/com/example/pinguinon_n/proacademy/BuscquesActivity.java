@@ -23,7 +23,7 @@ import java.net.URL;
 
 public class BuscquesActivity extends AppCompatActivity {
 
-    String getQuestionsURL = "http://192.168.0.16/siteacademy/api/getQuestions.php";
+    String getQuestionsURL = "http://130.100.4.161/siteacademy/api/getQuestions.php";
     ArrayAdapter adapter;
     ListView listQues;
 

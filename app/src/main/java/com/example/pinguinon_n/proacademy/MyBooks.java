@@ -36,7 +36,7 @@ public class MyBooks extends AppCompatActivity {
                 String libro = myBooksList.getItemAtPosition(pos).toString();
                 Intent myquesIntent = new Intent(MyBooks.this, MyQuestions.class);
                 myquesIntent.putExtra("libro",libro);
-                Toast.makeText(getApplicationContext(),libro,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), libro, Toast.LENGTH_SHORT).show();
                 MyBooks.this.startActivity(myquesIntent);
             }
         });

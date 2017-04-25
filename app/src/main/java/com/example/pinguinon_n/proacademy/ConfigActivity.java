@@ -20,7 +20,7 @@ public class ConfigActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config);
-        Toast.makeText(getApplicationContext(),"Gracias por usar Pro Academy",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Gracias por usar Pro Academy", Toast.LENGTH_SHORT).show();
         creators = (TextView)findViewById(R.id.creators);
         buscLibs = (Button)findViewById(R.id.bscLibs);
         myLibs = (Button)findViewById(R.id.myLibs);
@@ -37,7 +37,7 @@ public class ConfigActivity extends AppCompatActivity {
                 if (dedications == 14){
                     Toast.makeText(getApplicationContext()
                             ,"Dedicated to VMA, the Woman who's present in every page i read \n~Daniel",
-                            Toast.LENGTH_LONG).show();
+                            Toast.LENGTH_SHORT).show();
                     dedications = 0;
                 }
             } else if (v == buscLibs){

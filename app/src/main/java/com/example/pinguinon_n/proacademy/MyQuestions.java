@@ -1,8 +1,11 @@
 package com.example.pinguinon_n.proacademy;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,5 +30,18 @@ public class MyQuestions extends AppCompatActivity {
         lista = helper.getQuestionsBook(book);
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lista);
         myQuesList.setAdapter(adapter);
+        myQuesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int pos = position;
+                String pregunta = myQuesList.getItemAtPosition(pos).toString();
+                Toast.makeText(getApplicationContext(), pregunta, Toast.LENGTH_SHORT).show();
+                Intent myansIntent = new Intent(MyQuestions.this, WatchQuestions.class);
+                myansIntent.putExtra("question", pregunta);
+                MyQuestions.this.startActivity(myansIntent);
+            }
+        });
     }
+
+
 }

@@ -177,4 +177,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return lista;
     }
 
+    public ArrayList<String> getAnswers(String question) {
+        ArrayList<String> lista = new ArrayList<>();
+        String answer1, answer2, answer3, answer4;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] args = new String[]{question};
+        Cursor c = db.rawQuery("SELECT ans1, ans2, ans3, ans4 FROM question WHERE content = ?", args);
+        if (c.moveToFirst()) {
+            do {
+                Log.e("Done", "obteniendo datos--------------------------------------------");
+                answer1 = c.getString(0);
+                answer2 = c.getString(1);
+                answer3 = c.getString(2);
+                answer4 = c.getString(3);
+                lista.add(answer1);
+                lista.add(answer2);
+                lista.add(answer3);
+                lista.add(answer4);
+            } while (c.moveToNext());
+        }
+        c.close();
+        return lista;
+    }
+
 }

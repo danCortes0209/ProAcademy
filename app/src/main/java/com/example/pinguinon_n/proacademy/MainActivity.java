@@ -1,7 +1,9 @@
 package com.example.pinguinon_n.proacademy;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -54,5 +56,25 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onBackPressed() {
+        messageButtonOkCancel("Hey!", "¿Deseas salir de la app?", "Aceptar", "Cancelar");
+    }
 
+    public void messageButtonOkCancel(String title, String message, String aceptText, String cancelText) {
+        AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+        alerta.setTitle(title);
+        alerta.setMessage(message);
+        alerta.setCancelable(false);
+        alerta.setPositiveButton(aceptText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface alerta, int id) {
+                finish();
+            }
+        });
+        alerta.setNegativeButton(cancelText, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface alerta, int id) {
+            }
+        });
+        alerta.show();
+    }
 }

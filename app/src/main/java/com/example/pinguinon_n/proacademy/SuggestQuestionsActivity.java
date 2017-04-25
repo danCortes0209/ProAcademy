@@ -30,7 +30,7 @@ public class SuggestQuestionsActivity extends AppCompatActivity {
     Button btnSendData;
     int ntext;
     String question, ans1, ans2, ans3, ans4;
-    String putQuestionsURL = "http://192.168.0.16/siteacademy/api/insertQuestions.php";
+    String putQuestionsURL = "http://130.100.4.161/siteacademy/api/insertQuestions.php";
     DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
